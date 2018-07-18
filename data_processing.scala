@@ -354,7 +354,7 @@ val dfPlayers=spark.sql("select age-min_age as exp,tPlayers.* from tPlayers join
 
 //save as table
 spark.sql(s"CREATE DATABASE IF NOT EXISTS $dbName")
-dfPlayers.write.mode("overwrite").saveAsTable(s"$dbName.Players")
+dfPlayers.write.mode("overwrite").saveAsTable(s"$dbName.players")
 //filteredStats.unpersist()
 
 //********************
